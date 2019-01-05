@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".activity.MeetTheFounderActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="3dp">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <include layout="@layout/extra_bar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+
+                    <com.makemusiccount.android.ui.MyHeadingTextView
+                        android:id="@+id/tvHeading1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textSize="20sp" />
+
+                    <com.makemusiccount.android.ui.MyBodyTextView
+                        android:id="@+id/tvDesc1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+
+                    <com.makemusiccount.android.ui.MyHeadingTextView
+                        android:id="@+id/tvHeading2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textSize="20sp" />
+
+                    <com.makemusiccount.android.ui.MyBodyTextView
+                        android:id="@+id/tvDesc2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+
+                    <com.makemusiccount.android.ui.MyHeadingTextView
+                        android:id="@+id/tvHeading3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textSize="20sp" />
+
+                    <com.makemusiccount.android.ui.MyBodyTextView
+                        android:id="@+id/tvDesc3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+
+                    <com.makemusiccount.android.ui.MyHeadingTextView
+                        android:id="@+id/tvHeading4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:textSize="20sp" />
+
+                    <com.makemusiccount.android.ui.MyBodyTextView
+                        android:id="@+id/tvDesc4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

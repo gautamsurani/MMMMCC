@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#277af7</color>
+    <color name="colorPrimaryDark">#1d68d9</color>
+    <color name="colorAccent">#277af7</color>
+
+    <color name="test">#FFD200</color>
+
+    <color name="colorTheme">#113a79</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="black">#111111</color>
+
+    <color name="side_bar_text_color">#414141</color>
+
+    <color name="divider">#e1e1e1</color>
+
+    <color name="login_text">#ffffff</color>
+
+    <color name="profile_text">#646464</color>
+
+    <color name="gmail_bg">#D6463B</color>
+
+    <color name="btn_theme">#21c0df</color>
+
+    <color name="Tex">#404547</color>
+
+    <color name="red">#ea495f</color>
+    <color name="green">#5ccc78</color>
+
+    <color name="category_textcolour">#404547</color>
+
+    <color name="boticon">#999ba4ab</color>
+
+</resources>

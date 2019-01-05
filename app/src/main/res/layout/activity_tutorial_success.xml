@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.SuccessActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:padding="2dp"
+            android:src="@drawable/ic_back"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/ivDashboard"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/app_logo"
+            tools:ignore="ContentDescription,RtlSymmetry" />
+
+    </RelativeLayout>
+
+    <com.makemusiccount.android.ui.MyBoldTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rl1"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/home_image_one"
+        tools:ignore="ContentDescription" />
+
+    <RelativeLayout
+        android:id="@+id/cvSuccess"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvTitle"
+        android:background="@drawable/blue_shape"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/llCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/win_circle"
+                android:gravity="center">
+
+                <com.whygraphics.gifview.gif.GIFView
+                    android:id="@+id/main_activity_gif_vie"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:scaleType="center"
+                    android:layout_centerHorizontal="true" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@+id/llCircle"
+            android:layout_toRightOf="@+id/llCircle"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.makemusiccount.android.ui.MyAngryBirdsTextView
+                android:id="@+id/tvHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="30sp"
+                tools:ignore="RelativeOverlap,RtlSymmetry" />
+
+            <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                android:id="@+id/myRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srb_borderColor="@color/test"
+                app:srb_fillColor="@color/test"
+                app:srb_starSize="40dp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.makemusiccount.android.ui.MyBodyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You Get "
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+
+                <com.makemusiccount.android.ui.CountAnimationTextView
+                    android:id="@+id/count_animation_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="2dp"
+                    android:text="0"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="24sp" />
+
+                <com.makemusiccount.android.ui.MyBodyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Points"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <com.makemusiccount.android.ui.MyBodyTextView
+                android:id="@+id/tvScoreLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#606060"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivShare"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/share"
+                    app:civ_border_color="@color/divider"
+                    app:civ_border_width="2dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="40dp"
+                    android:id="@+id/ivRetry"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/refresh"
+                    app:civ_border_color="@color/divider"
+                    app:civ_border_width="2dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="40dp"
+                    android:id="@+id/ivList"
+                    android:layout_height="40dp"
+                    android:src="@drawable/list"
+                    app:civ_border_color="@color/divider"
+                    app:civ_border_width="2dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-30dp"
+        android:src="@drawable/right_key" />
+
+</RelativeLayout>

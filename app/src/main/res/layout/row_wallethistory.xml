@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="10">
+
+    <com.makemusiccount.android.ui.MyBodyTextView
+        android:id="@+id/tvTransactiondate"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:gravity="center_horizontal|center_vertical"
+        android:textColor="@color/category_textcolour"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@color/boticon" />
+
+            <ImageView
+                android:id="@+id/imgTransactionStatus"
+                android:layout_width="10dp"
+                android:layout_height="8dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_bluedot" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_weight="7"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.makemusiccount.android.ui.MyBodyTextView
+                android:id="@+id/tvTransactionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:maxLines="2"
+                android:textColor="@color/category_textcolour"
+                android:textSize="13sp" />
+
+            <com.makemusiccount.android.ui.MyHeadingTextView
+                android:id="@+id/tvTransactionAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:textColor="@color/colorPrimary"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

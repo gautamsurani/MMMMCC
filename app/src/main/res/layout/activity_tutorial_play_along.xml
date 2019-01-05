@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="3dp">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+        </android.support.design.widget.AppBarLayout>
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/play_along_bg">
+
+            <include
+                android:id="@+id/extra_bar"
+                layout="@layout/extra_bar" />
+
+            <LinearLayout
+                android:layout_below="@+id/extra_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginLeft="90dp"
+                    android:layout_marginRight="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/ivImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY" />
+
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <com.makemusiccount.android.ui.MyHeadingTextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp" />
+
+                    <com.makemusiccount.android.ui.MyBodyTextView
+                        android:id="@+id/tvArtist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:textSize="10sp" />
+
+
+
+                    <Chronometer
+                        android:id="@+id/chronometer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="00 min : 00 sec"
+                        android:textColor="@color/btn_theme"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp">
+
+                        <RelativeLayout
+                            android:id="@+id/rl1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/ivPlay"
+                                android:layout_width="23dp"
+                                android:layout_height="23dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/play"
+                                android:tag="PLAY" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@+id/rl1">
+
+                            <ImageView
+                                android:id="@+id/ivPlay1"
+                                android:layout_width="65dp"
+                                android:layout_height="23dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/play_song"
+                                android:tag="PLAY" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tvNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/next_button" />
+
+                    <com.makemusiccount.android.ui.MyBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:text="Next"
+                        android:textColor="@color/Tex"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rlCountdown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.makemusiccount.android.ui.MyHeadingTextView
+                    android:id="@+id/tvCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="44sp"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/pbCounter"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp" />
+
+                <com.makemusiccount.android.ui.MyHeadingTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Loading..."
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:background="@drawable/extra_bar_bg" />
+
+        <com.makemusiccount.pianoview.view.PianoView
+            android:id="@+id/pianoView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</RelativeLayout>

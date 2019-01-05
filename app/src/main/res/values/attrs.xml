@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyRoundImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <!-- {@deprecated Use civ_circlebackground_color instead.} -->
+        <attr name="civ_fill_color" format="color" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="LoadingView">
+        <attr name="mfl_onclickLoading" format="boolean" />
+        <attr name="mfl_duration" format="integer" />
+        <attr name="mfl_repeat" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="InvertedTextProgressbar">
+        <attr name="text" format="string"/>
+        <attr name="text_color" format="color"/>
+        <attr name="text_inverted_color" format="color"/>
+        <attr name="text_size" format="dimension"/>
+        <attr name="text_typeface" format="integer"/>
+        <attr name="max_progress" format="integer"/>
+        <attr name="min_progress" format="integer"/>
+    </declare-styleable>
+</resources>

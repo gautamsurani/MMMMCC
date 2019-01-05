@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.makemusiccount.android.ui.MyBodyTextView
+        android:id="@+id/tvnewproducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="18dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/Tex"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_below="@+id/tvnewproducts"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/ic_login_now"
+        tools:ignore="ContentDescription" />
+
+    <com.makemusiccount.android.ui.MyTextView
+        android:id="@+id/tvMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="3dp"
+        android:layout_below="@+id/imageView7"
+        android:gravity="center_horizontal"
+        android:textColor="@color/Tex"
+        android:textSize="16sp" />
+
+    <com.makemusiccount.android.ui.MyBoldTextView
+        android:id="@+id/btnRetryinternet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMsg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/cat_bg"
+        android:gravity="center_horizontal"
+        android:paddingBottom="3dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="3dp"
+        android:text="SIGN IN NOW"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_alignParentRight="true"
+        android:padding="15dp"
+        android:src="@drawable/close_button"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+</RelativeLayout>

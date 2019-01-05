@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/extra_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/leaderboard_bg"
+        android:orientation="vertical">
+
+        <com.makemusiccount.android.ui.MyBoldTextView
+            android:id="@+id/tvHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Leaderboard"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="gone"
+            tools:ignore="RtlSymmetry" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivCup3"
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="5dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivUser3"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp" />
+
+                <com.makemusiccount.android.ui.MyBodyTextView
+                    android:id="@+id/tvName3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:singleLine="true"
+                    android:text="Rohit Shah"
+                    android:textSize="14sp" />
+
+
+                <com.makemusiccount.android.ui.MyHeadingTextView
+                    android:id="@+id/tvScore3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:singleLine="true"
+                    android:text="1452"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivCup1"
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivUser1"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp" />
+
+                <com.makemusiccount.android.ui.MyBodyTextView
+                    android:id="@+id/tvName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:singleLine="true"
+                    android:text="Rohit Shah"
+                    android:textSize="14sp" />
+
+
+                <com.makemusiccount.android.ui.MyHeadingTextView
+                    android:id="@+id/tvScore1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:singleLine="true"
+                    android:text="1452"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivCup2"
+                    android:layout_width="60dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="5dp" />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivUser2"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp" />
+
+                <com.makemusiccount.android.ui.MyBodyTextView
+                    android:id="@+id/tvName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="2dp"
+                    android:singleLine="true"
+                    android:text="Rohit Shah"
+                    android:textSize="14sp" />
+
+
+                <com.makemusiccount.android.ui.MyHeadingTextView
+                    android:id="@+id/tvScore2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:singleLine="true"
+                    android:text="1452"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="450dp"
+        android:layout_height="0dp"
+        android:layout_weight="1.2">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvHeading1"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbars="vertical" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/circular_progress"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+

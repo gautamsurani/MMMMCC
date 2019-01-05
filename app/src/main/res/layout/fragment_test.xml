@@ -1,0 +1,224 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.makemusiccount.android.fragment.TestFragment">
+
+    <include
+        android:id="@+id/extra_bar"
+        layout="@layout/extra_bar" />
+
+    <com.makemusiccount.android.ui.MyHeadingTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/extra_bar"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:text="Question"
+        android:textColor="@color/colorTheme"
+        android:textSize="20sp" />
+
+
+    <LinearLayout
+        android:id="@+id/llBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#401d68d9"
+        android:orientation="vertical"
+        android:paddingBottom="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:paddingTop="4dp"
+                android:src="@drawable/ic_information"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:textColor="@color/Tex"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ans_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/iv1"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/round"
+                    android:tint="@color/Tex" />
+
+                <com.makemusiccount.android.ui.MyTextView
+                    android:id="@+id/tvOp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/Tex"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/ans_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/iv2"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/round"
+                    android:tint="@color/Tex"
+                    tools:ignore="ContentDescription" />
+
+                <com.makemusiccount.android.ui.MyTextView
+                    android:id="@+id/tvOp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/Tex"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ans_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/iv3"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/round"
+                    android:tint="@color/Tex"
+                    tools:ignore="ContentDescription" />
+
+                <com.makemusiccount.android.ui.MyTextView
+                    android:id="@+id/tvOp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/Tex"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.makemusiccount.android.ui.MyHeadingTextView
+        android:id="@+id/tvNoteLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llBox"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:text="Note : "
+        android:textColor="@color/Tex"
+        android:textSize="16sp" />
+
+    <com.makemusiccount.android.ui.MyBodyTextView
+        android:id="@+id/tvNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvNoteLabel"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="#797d7e"
+        android:textSize="13sp" />
+
+    <RelativeLayout
+        android:id="@+id/rlCircle"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/tvTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-30dp">
+
+        <View
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/custom_progressbar_drawable" />
+
+        <TextView
+            android:id="@+id/txtProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/Tex"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_below="@+id/rlCircle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-10dp"
+        android:src="@drawable/alarm_clock" />
+
+</RelativeLayout>

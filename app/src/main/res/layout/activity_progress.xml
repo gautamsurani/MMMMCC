@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_shape"
+    android:orientation="vertical"
+    tools:context=".activity.ProgressActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="3dp">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <include layout="@layout/extra_bar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="20dp">
+
+                <pl.pawelkleczkowski.customgauge.CustomGauge
+                    android:id="@+id/gaugeSong"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    app:gaugeEndValue="100"
+                    app:gaugePointEndColor="@color/colorTheme"
+                    app:gaugePointStartColor="@color/colorPrimary"
+                    app:gaugeStartAngle="135"
+                    app:gaugeStartValue="0"
+                    app:gaugeStrokeCap="ROUND"
+                    app:gaugeStrokeColor="@color/divider"
+                    app:gaugeStrokeWidth="20dp"
+                    app:gaugeSweepAngle="270" />
+
+                <com.makemusiccount.android.ui.MyHeadingTextView
+                    android:id="@+id/textSong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="@color/colorTheme"
+                    android:textSize="20sp" />
+
+                <com.makemusiccount.android.ui.MyBodyTextView
+                    android:id="@+id/tvSongHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textSong"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorTheme"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <com.makemusiccount.android.ui.MyBodyTextView
+                android:id="@+id/tvSongNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#eaeaea" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="20dp">
+
+                <pl.pawelkleczkowski.customgauge.CustomGauge
+                    android:id="@+id/gaugeQue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    app:gaugeEndValue="100"
+                    app:gaugePointEndColor="@color/colorTheme"
+                    app:gaugePointStartColor="@color/colorPrimary"
+                    app:gaugeStartAngle="135"
+                    app:gaugeStartValue="0"
+                    app:gaugeStrokeCap="ROUND"
+                    app:gaugeStrokeColor="@color/divider"
+                    app:gaugeStrokeWidth="20dp"
+                    app:gaugeSweepAngle="270" />
+
+                <com.makemusiccount.android.ui.MyHeadingTextView
+                    android:id="@+id/textQue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="@color/colorTheme"
+                    android:textSize="20sp" />
+
+                <com.makemusiccount.android.ui.MyBodyTextView
+                    android:id="@+id/tvHeadingQue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textQue"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorTheme"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <com.makemusiccount.android.ui.MyBodyTextView
+                android:id="@+id/tvQueNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

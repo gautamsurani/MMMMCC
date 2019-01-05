@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="7dp"
+    android:gravity="center"
+    android:id="@+id/llMain"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.makemusiccount.android.ui.MyRoundImageView
+            android:id="@+id/ivImg"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+        </com.makemusiccount.android.ui.MyRoundImageView>
+
+        <com.makemusiccount.android.ui.MyHeadingTextView
+            android:id="@+id/tvCount"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignEnd="@+id/ivImg"
+            android:layout_alignRight="@+id/ivImg"
+            android:background="@drawable/circuler_text_bg"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp">
+
+        </com.makemusiccount.android.ui.MyHeadingTextView>
+
+    </RelativeLayout>
+
+    <com.makemusiccount.android.ui.MyBodyTextView
+        android:id="@+id/tvValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textSize="20sp" />
+
+    <com.makemusiccount.android.ui.MyBodyTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12sp" />
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "509516753085",
+    "firebase_url": "https://make-music-count-197411.firebaseio.com",
+    "project_id": "make-music-count-197411",
+    "storage_bucket": "make-music-count-197411.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509516753085:android:3fe7b3b416f170d8",
+        "android_client_info": {
+          "package_name": "com.makemusiccount.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509516753085-3o2sp0903rs5sbdtfo28lalhkdj5oln8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaoXhYoTYYVet3D50n-SUCkRjCSSpOtxw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

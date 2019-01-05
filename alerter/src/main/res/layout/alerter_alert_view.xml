@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/flClickShield"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:clickable="false">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/flAlertBackground"
+        style="@style/AlertStyle"
+        android:background="@android:color/darker_gray"
+        android:clickable="true"
+        android:clipToPadding="false"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:paddingStart="@dimen/alerter_padding_default"
+        android:paddingTop="@dimen/alerter_alert_view_padding_top"
+        android:paddingEnd="@dimen/alerter_padding_default"
+        android:paddingBottom="@dimen/alerter_padding_default"
+        tools:visibility="visible">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="@dimen/alerter_alert_icn_size"
+            android:layout_height="@dimen/alerter_alert_icn_size"
+            android:maxWidth="@dimen/alerter_alert_icn_size"
+            android:maxHeight="@dimen/alerter_alert_icn_size"
+            android:src="@drawable/alerter_ic_notifications"
+            android:tint="@color/alert_default_icon_color"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/tvText"
+            app:layout_constraintEnd_toStartOf="@id/guidelineVertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/pbProgress"
+            android:layout_width="@dimen/alerter_alert_progress_size"
+            android:layout_height="@dimen/alerter_alert_progress_size"
+            android:layout_margin="@dimen/alerter_padding_half"
+            android:indeterminateTint="@android:color/white"
+            android:progressTint="@android:color/white"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/tvText"
+            app:layout_constraintEnd_toStartOf="@id/guidelineVertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintWidth_percent="0.3" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/alerter_padding_half"
+            android:layout_marginEnd="@dimen/alerter_padding_half"
+            android:paddingStart="@dimen/alerter_padding_small"
+            android:paddingLeft="@dimen/alerter_padding_small"
+            android:textAppearance="@style/AlertTextAppearance.Title"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Title"
+            tools:visibility="visible" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tvText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/alerter_padding_half"
+            android:layout_marginEnd="@dimen/alerter_padding_half"
+            android:paddingStart="@dimen/alerter_padding_small"
+            android:paddingLeft="@dimen/alerter_padding_small"
+            android:paddingTop="@dimen/alerter_padding_small"
+            android:paddingBottom="@dimen/alerter_padding_small"
+            android:textAppearance="@style/AlertTextAppearance.Text"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivIcon"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            tools:text="Text"
+            tools:visibility="visible" />
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:id="@+id/llButtonContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvText" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

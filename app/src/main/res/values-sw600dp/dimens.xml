@@ -1,0 +1,20 @@
+<resources>
+    <dimen name="toolbar_size">80dp</dimen>
+
+    <dimen name="paddingToBottom">20dp</dimen>
+
+    <dimen name="paddingFullScreenToBottom">28dp</dimen>
+
+    <dimen name="whiteKeyTextSize">16dp</dimen>
+
+    <dimen name="blackKeyTextSize">14dp</dimen>
+
+    <dimen name="paddingToBottomBlack">15dp</dimen>
+
+    <dimen name="paddingFullScreenToBottomBlack">42dp</dimen>
+
+    <dimen name="side_bar_height">65dp</dimen>
+
+    <dimen name="text_size_default">14sp</dimen>
+
+</resources>

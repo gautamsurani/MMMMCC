@@ -1,0 +1,9 @@
+<resources>
+
+
+    <dimen name="paddingToBottomBlack">10dp</dimen>
+
+    <dimen name="paddingToTopBlack">22dp</dimen>
+
+
+</resources>

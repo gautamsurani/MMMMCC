@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="3dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_login_now"
+            tools:ignore="ContentDescription" />
+
+        <com.makemusiccount.android.ui.MyHeadingTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivIcon"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="18dp"
+            android:gravity="center_horizontal"
+            android:text="This Content is for member only!"
+            android:textColor="@color/Tex"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+
+        <com.makemusiccount.android.ui.MyBodyTextView
+            android:id="@+id/tvMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:text="Sign up to become a member and get instant access"
+            android:paddingTop="5dp"
+            android:textColor="@color/Tex"
+            android:textSize="16sp" />
+
+        <com.makemusiccount.android.ui.MyBoldTextView
+            android:id="@+id/btnOk"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/tvMsg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_test_question"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:text="BUY PACKAGE"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

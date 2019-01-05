@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Make Music Count</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="prefrence_file_name">preference_name</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="press_again_exit_app">Press again to exit from the app</string>
+
+    <string name="press_again_to_go_song_list">Press again to song list</string>
+
+    <string name="press_again_to_go_tutorial_list">Press again to tutorial list</string>
+
+    <string name="str_common_TakeCamera">Take picture using Camera</string>
+    <string name="str_common_TakeGallery">Choose from Gallery</string>
+
+    <string name="signwithfb">Sign in with Facebook</string>
+    <string name="facebook_id">1995055534115870</string>
+
+    <string name="no_network">Seems like there is a problem with \n your internet connection</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_tutorial_success">TutorialSuccessActivity</string>
+    <string name="test">“Although I was talented and excelled in math in school, I was hesitant to major in math at Morehouse. My hesitation came from a personal intimidation of the subject.
+        It was always implied that math was a subject to be feared and not embraced.\n\n
+
+        However, during my first year I read ‘The Eight’ by Katherine Neville,that described a pianist composing a musical piece from math movements of a chess game. This was interesting to me and I believed that I could make a similar connection between math and music, but I would need the math background to do it.
+        So I decided to go for it and major in math.” Blackwell graduated from Morehouse College with a B.S. in Mathematics and worked for GE Energy as a Lead Modeling Analyst while serving as the Music Director and pianist at Elizabeth Baptist Church. However, after three years with GE Energy and EBC, he knew he was ready to transition and begin fulfilling his dream of creating the “Make Music Count” program. ”\n\n
+
+        ‘Make Music Count’ was created after I realized how exactly I learned to play the piano. As a pianist and organist who plays music by ear I realized that I built my music chords by applying mathematics versus simply listening and playing what I heard. I learn different notes and progressions to play by using numerical structuring and then match what I derived with what I hear in songs. I then realized that not only was this a way to teach aspiring musicians with no musical background how to play the piano, but also it would definitely get students who are intimidated and struggle in math interested in learning again”\n\n</string>
+
+</resources>

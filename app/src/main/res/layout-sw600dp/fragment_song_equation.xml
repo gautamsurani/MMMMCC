@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.makemusiccount.android.ui.MyBodyTextView
+            android:id="@+id/tvSongName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
+
+        <LinearLayout
+            android:id="@+id/llEquation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/ivBack1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/left_arrow"
+                android:visibility="gone"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <com.makemusiccount.android.ui.InvertedTextProgressbar
+                    android:id="@+id/progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/background_progress_bar"
+                    app:max_progress="100"
+                    app:min_progress="0"
+                    app:text="Second remaining..."
+                    app:text_color="#b1b1b1"
+                    app:text_inverted_color="#FFFFFF"
+                    app:text_size="13sp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ivNext1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/right_arrow"
+                android:visibility="gone"
+                tools:ignore="ContentDescription,RtlHardcoded" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/progress_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:indeterminate="true"
+            android:max="100"
+            android:minHeight="50dp"
+            android:minWidth="200dp"
+            android:progress="1"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

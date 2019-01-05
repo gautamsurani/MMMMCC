@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/home_image_one"
+        tools:ignore="ContentDescription" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvDashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:id="@+id/rlDemo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/right_key" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.makemusiccount.android.ui.MyHeadingTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Math &amp; Music Remixed."
+                android:textColor="@color/colorTheme"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+            <com.makemusiccount.android.ui.MyBodyTextView
+                android:layout_width="450dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="Whether in the classroom or at home, Make Music Count makes Learning math even more accessible through music!"
+                android:textColor="@color/btn_theme"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.makemusiccount.android.ui.MyHeadingTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Start learning with the next generation curriciculum"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+
+                <com.makemusiccount.android.ui.MyBodyTextView
+                    android:id="@+id/tvStartPlaying"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_orange_background"
+                    android:gravity="center"
+                    android:text="Start Playing"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

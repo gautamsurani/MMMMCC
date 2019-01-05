@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eff2f7"
+    tools:context=".activity.HelpActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="3dp">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <include layout="@layout/extra_bar" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivImage"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/ic_profileicon" />
+
+            <com.makemusiccount.android.ui.MyHeadingTextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text="John Kensington"
+                android:textColor="@color/Tex"
+                android:textSize="28sp" />
+
+            <com.makemusiccount.android.ui.MyBodyTextView
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="test@makemymusic.com"
+                android:textColor="@color/profile_text"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/profile_edittext_bg">
+
+                <EditText
+                    android:id="@+id/etMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00ffffff"
+                    android:gravity="top"
+                    android:hint="Enter something..."
+                    android:padding="10dp"
+                    android:textColor="@color/profile_text"
+                    android:textColorHint="@color/profile_text"
+                    android:textSize="15sp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <com.makemusiccount.android.ui.MyHeadingTextView
+                android:id="@+id/tvSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rect"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

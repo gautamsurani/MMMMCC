@@ -1,0 +1,172 @@
+//Plugins
+plugins {
+    id "com.jfrog.bintray" version "1.8.4"
+}
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: "maven-publish"
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'org.jetbrains.dokka'
+
+//Quality Standards
+apply from: rootProject.file('quality.gradle')
+
+final String GROUP_ID = "com.tapadoo.android"
+final String VERSION      = "3.0.0"
+final String DESCRIPTION  = "An Android Alerting Library"
+final String GITHUB_URL   = "https://github.com/Tapadoo/Alerter"
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion    rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        versionCode 1
+        versionName VERSION
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    lintOptions {
+        abortOnError true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+//BinTray configuration - credentials stored in user's gradle.properties
+bintray {
+    user = getBinTrayUser()
+    key  = getBinTrayKey()
+
+    publications = ['Alerter']
+
+    pkg {
+        repo            = 'maven'
+        name            = project.getName()
+        desc            = DESCRIPTION
+        vcsUrl          = GITHUB_URL + '.git'
+        websiteUrl      = GITHUB_URL
+        issueTrackerUrl = GITHUB_URL + '/issues'
+        licenses        = ['MIT']
+        publish         = true
+
+        version {
+            name     = VERSION // Version name i.e. "1.0"
+            desc     = DESCRIPTION
+            vcsTag   = VERSION
+            released = new Date()
+        }
+    }
+}
+
+// Create the POM configuration - required for jCenter uploading
+def pomConfig = {
+    licenses {
+        license {
+            name "MIT License"
+            url "https://opensource.org/licenses/MIT"
+            distribution "repo"
+        }
+    }
+}
+
+// Create the publication with the pom configuration:
+publishing {
+    publications {
+        Alerter(MavenPublication) {
+            groupId GROUP_ID
+            version VERSION
+            artifactId project.getName()
+
+            //from components.android
+            artifact sourcesJar
+            artifact javadocJar
+
+            // Tell maven to prepare the generated "*.aar" file for publishing
+            artifact("$buildDir/outputs/aar/${project.getName()}-release.aar")
+
+            pom.withXml {
+                def root = asNode()
+                root.appendNode('description', DESCRIPTION)
+                root.appendNode('name', project.getName())
+                root.appendNode('url', GITHUB_URL)
+                root.children().last() + pomConfig
+            }
+        }
+    }
+}
+
+configurations {
+    javadocDeps
+}
+
+dependencies {
+    implementation rootProject.ext.libs.support_v4
+    implementation rootProject.ext.libs.appcompat_v7
+    implementation rootProject.ext.libs.support_annotations
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+
+    // Local Unit Tests - in src/test
+    testImplementation rootProject.ext.libs.junit
+
+    // Instrumentation Tests - in src/androidTest
+    androidTestImplementation rootProject.ext.libs.junit
+    androidTestImplementation rootProject.ext.libs.rules
+    androidTestImplementation rootProject.ext.libs.hamcrest
+    androidTestImplementation rootProject.ext.libs.espresso
+    androidTestImplementation rootProject.ext.libs.runner
+    androidTestImplementation rootProject.ext.libs.uiautomator
+    androidTestImplementation(rootProject.ext.libs.espresso, {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    //Javadocs References
+    javadocDeps rootProject.ext.libs.support_annotations
+    javadocDeps rootProject.ext.libs.support_v4
+    javadocDeps rootProject.ext.libs.appcompat_v7
+}
+
+task showBintrayProps {
+    doLast {
+        println "Bintray user/password: ${getBinTrayUser()}/${getBinTrayKey()}"
+    }
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadocJar(type: Jar) {
+    classifier = 'javadoc'
+    from "$buildDir/javadoc"
+}
+
+dokka {
+    outputFormat = 'javadoc'
+    outputDirectory = "$buildDir/javadoc"
+}
+
+bintrayUpload.dependsOn 'generatePomFileForAlerterPublication'
+bintrayUpload.dependsOn 'dokka'
+
+def final getBinTrayUser() {
+    final String BINTRAY_USER = "BINTRAY_USER"
+    return project.hasProperty(BINTRAY_USER)? project.getProperty(BINTRAY_USER) : null
+}
+
+def final getBinTrayKey() {
+    final String BINTRAY_KEY  = "BINTRAY_KEY"
+    return project.hasProperty(BINTRAY_KEY)? project.getProperty(BINTRAY_KEY) : null
+}
+

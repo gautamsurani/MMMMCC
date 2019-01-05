@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.makemusiccount.android.ui.MyHeadingTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivIcon"
+        android:layout_marginTop="-50dp"
+        android:background="@drawable/badges_popup_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.makemusiccount.android.ui.MyHeadingTextView
+            android:id="@+id/tvTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <com.makemusiccount.android.ui.MyBodyTextView
+            android:id="@+id/tvMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="2dp"
+            android:textColor="@color/green"
+            android:textSize="14sp" />
+
+        <com.makemusiccount.android.ui.MyHeadingTextView
+            android:id="@+id/btnOk"
+            android:layout_width="80dp"
+            android:layout_height="33dp"
+            android:layout_below="@+id/tvMsg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_test_question"
+            android:gravity="center"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:text="OK"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_below="@+id/tvTitle"
+        android:id="@+id/ivIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_login_now"
+        tools:ignore="ContentDescription" />
+</RelativeLayout>

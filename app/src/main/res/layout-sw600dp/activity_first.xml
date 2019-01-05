@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.makemusiccount.android.activity.LoginActivity">
+
+    <VideoView
+        android:id="@+id/videoview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:src="@drawable/app_logo_white" />
+
+        <com.makemusiccount.android.ui.MyHeadingTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Math &amp; Music Remixed."
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            tools:ignore="HardcodedText" />
+
+        <com.makemusiccount.android.ui.MyBodyTextView
+            android:layout_width="650dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="Whether in the classroom or at home, Make Music Count makes Learning math even more accessible through music!"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <com.makemusiccount.android.ui.MyHeadingTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Start learning with the next generation Math curriciculum"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            tools:ignore="HardcodedText" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.makemusiccount.android.ui.MyBodyTextView
+                android:id="@+id/tvSignIn"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/login_btn_bg"
+                android:gravity="center"
+                android:text="Sign in"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <com.makemusiccount.android.ui.MyBodyTextView
+                android:id="@+id/tvSignUp"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/signup_btn_bg"
+                android:gravity="center"
+                android:text="Sign up"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

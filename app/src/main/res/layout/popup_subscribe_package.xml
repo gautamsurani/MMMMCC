@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivIcon"
+        android:layout_marginTop="-50dp"
+        android:background="@drawable/badges_popup_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.makemusiccount.android.ui.MyHeadingTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/test"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <com.makemusiccount.android.ui.MyBodyTextView
+            android:id="@+id/tvMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="2dp"
+            android:textColor="@color/Tex"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.makemusiccount.android.ui.MyBodyTextView
+                android:id="@+id/btnCancel"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_test_question"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="3dp"
+                android:layout_marginRight="5dp"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+
+            <com.makemusiccount.android.ui.MyBodyTextView
+                android:id="@+id/btnSubscribe"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/ic_next_song"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="3dp"
+                android:text="Subscribe"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        tools:ignore="ContentDescription" />
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="25dp"
+    android:orientation="vertical"
+    tools:context=".activity.SettingsActivity">
+
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:tint="@color/Tex"
+        android:src="@drawable/close_button"/>
+
+    <com.makemusiccount.android.ui.MyBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Settings"
+        android:textSize="20sp"
+        android:textColor="@color/Tex"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="30dp">
+
+        <com.makemusiccount.android.ui.MyBodyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Song Sound"/>
+
+        <SeekBar
+            android:id="@+id/songSeekBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="20dp">
+
+        <com.makemusiccount.android.ui.MyBodyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Piano Sound"/>
+
+        <SeekBar
+            android:id="@+id/pianoSeekBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

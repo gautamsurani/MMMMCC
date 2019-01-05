@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llMain"
+    android:layout_margin="5dp"
+    android:layout_width="400dp"
+    android:layout_height="140dp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <com.makemusiccount.android.ui.MyHeadingTextView
+                android:layout_width="wrap_content"
+                android:id="@+id/tvId"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/colorTheme"/>
+
+            <com.makemusiccount.android.ui.MyBodyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvStartDate"
+                android:textSize="16sp"
+                android:textColor="@color/btn_theme"/>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="1dp"
+            android:background="#e2e2e2"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <com.makemusiccount.android.ui.MyBodyTextView
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|end"
+                    android:paddingRight="5dp"
+                    android:text="Current Plan :"
+                    android:textSize="14sp" />
+
+                <com.makemusiccount.android.ui.MyBodyTextView
+                    android:id="@+id/tvPlan"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:singleLine="true"
+                    android:textColor="@color/btn_theme"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="#e2e2e2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <com.makemusiccount.android.ui.MyBodyTextView
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|end"
+                    android:paddingRight="5dp"
+                    android:text="Amount Paid :"
+                    android:textSize="14sp" />
+
+                <com.makemusiccount.android.ui.MyBodyTextView
+                    android:id="@+id/tvAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/btn_theme"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="#e2e2e2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <com.makemusiccount.android.ui.MyBodyTextView
+                    android:layout_width="120dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|end"
+                    android:paddingRight="5dp"
+                    android:text="Expiring on :"
+                    android:textSize="14sp" />
+
+                <com.makemusiccount.android.ui.MyBodyTextView
+                    android:id="@+id/tvValidity"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:textColor="@color/btn_theme"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

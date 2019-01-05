@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.makemusiccount.android.activity.LoginActivity">
+
+    <VideoView
+        android:id="@+id/videoview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3d8c8c8c"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:id="@+id/llMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!--login layout-->
+                <LinearLayout
+                    android:id="@+id/llLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="500dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/login_bg"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:src="@drawable/app_logo_white"
+                                tools:ignore="ContentDescription" />
+
+                            <com.makemusiccount.android.ui.MyHeadingTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:text="Math &amp; Music Remixed."
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                                tools:ignore="HardcodedText" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittext_bg"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="match_parent"
+                                android:padding="12dp"
+                                android:src="@drawable/man" />
+
+                            <EditText
+                                android:id="@+id/etUsername"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#00ffffff"
+                                android:hint="Email"
+                                android:maxLines="1"
+                                android:paddingRight="10dp"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textSize="18sp"
+                                tools:ignore="HardcodedText" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/edittext_bg"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="match_parent"
+                                android:padding="12dp"
+                                android:src="@drawable/key" />
+
+                            <EditText
+                                android:id="@+id/etPassword"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="#00ffffff"
+                                android:hint="Password"
+                                android:inputType="textPassword"
+                                android:paddingRight="10dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textSize="18sp"
+                                tools:ignore="HardcodedText" />
+
+                            <com.makemusiccount.android.ui.MyTextView
+                                android:id="@+id/tvHideShow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="Show"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+
+                        <com.makemusiccount.android.ui.MyBodyTextView
+                            android:id="@+id/tvForget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="5dp"
+                            android:textSize="18sp"
+                            android:text="Forgot your password?"
+                            android:textColor="@color/login_text"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tvLogin"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_login" />
+
+                        <com.makemusiccount.android.ui.MyBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Sign in"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--signup layout-->
+                <LinearLayout
+                    android:id="@+id/llSignUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="500dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/login_bg"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="30dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:src="@drawable/app_logo_white"
+                                tools:ignore="ContentDescription" />
+
+                            <com.makemusiccount.android.ui.MyHeadingTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:text="Math &amp; Music Remixed."
+                                android:textColor="@color/white"
+                                android:textSize="22sp"
+                                tools:ignore="HardcodedText" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/edittext_bg">
+
+                                <EditText
+                                    android:id="@+id/etSignUpEmail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#00ffffff"
+                                    android:hint="Email"
+                                    android:inputType="textEmailAddress"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/white"
+                                    android:textSize="18sp"
+                                    tools:ignore="HardcodedText" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/edittext_bg">
+
+                                <EditText
+                                    android:id="@+id/etSignUpMobile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#00ffffff"
+                                    android:hint="Mobile No"
+                                    android:inputType="number"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/white"
+                                    android:textSize="18sp"
+                                    tools:ignore="HardcodedText" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/edittext_bg">
+
+                                <EditText
+                                    android:id="@+id/etSignUpUsername"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#00ffffff"
+                                    android:hint="Name"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/white"
+                                    android:textSize="18sp"
+                                    tools:ignore="HardcodedText" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/edittext_bg"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/etSignUpPassword"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="#00ffffff"
+                                    android:hint="Password"
+                                    android:inputType="textPassword"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/white"
+                                    android:textSize="18sp"
+                                    tools:ignore="HardcodedText" />
+
+                                <com.makemusiccount.android.ui.MyTextView
+                                    android:id="@+id/tvHideShow1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp"
+                                    android:text="Show"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tvSignUp"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_login" />
+
+                        <com.makemusiccount.android.ui.MyBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Sign up"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--otp layout-->
+                <LinearLayout
+                    android:id="@+id/llOTP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_bg"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="20dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/llOTPBox"
+                            android:layout_width="180dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/edittext_bg"
+                            tools:ignore="UselessParent">
+
+                            <EditText
+                                android:id="@+id/etOTP"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="#00ffffff"
+                                android:gravity="center"
+                                android:hint="Enter OTP"
+                                android:inputType="number"
+                                android:maxLength="6"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textSize="16dp"
+                                tools:ignore="HardcodedText" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/llVerifyBox"
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/btn_bg"
+                            tools:ignore="RtlHardcoded,UselessParent">
+
+                            <com.makemusiccount.android.ui.MyBoldTextView
+                                android:id="@+id/tvVerify"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="Verify"
+                                android:textColor="@color/white"
+                                android:textSize="16dp"
+                                tools:ignore="HardcodedText" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.makemusiccount.android.ui.MyTextView
+                        android:id="@+id/tvResend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Don't Get OTP? Resend"
+                        android:textColor="@color/login_text"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <!--bottom layout-->
+                <LinearLayout
+                    android:layout_width="500dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="45dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <LinearLayout
+                        android:id="@+id/llNotAccount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="50dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:padding="5dp"
+                            android:src="@drawable/signin"
+                            android:tint="@color/white" />
+
+                        <com.makemusiccount.android.ui.MyBodyTextView
+                            android:id="@+id/tvLoginText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sign up"
+                            android:textSize="20sp"
+                            android:textColor="#f2f2f2" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:id="@+id/llPrivacy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:padding="5dp"
+                            android:src="@drawable/help"
+                            android:tint="@color/white" />
+
+                        <com.makemusiccount.android.ui.MyBodyTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Privacy Policy"
+                            android:textSize="20sp"
+                            android:textColor="#f2f2f2" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <com.makemusiccount.android.ui.MyBoldTextView
+        android:id="@+id/tvSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:padding="20dp"
+        android:textSize="20sp"
+        android:text="Skip"
+        android:textColor="@color/white"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>
